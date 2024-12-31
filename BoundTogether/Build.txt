@@ -1,0 +1,3 @@
+name = BoundTogether
+version = 0.1.1
+author = LostZealous

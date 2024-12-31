@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Define the target framework -->
+    <TargetFramework>net6.0</TargetFramework>
+
+    <!-- Mod-specific settings -->
+    <OutputPath>$(MSBuildThisFileDirectory)/bin/$(Configuration)/</OutputPath>
+    <RootNamespace>BoundTogether</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Add source files -->
+    <Compile Include="Content\Players\TetheredPlayer.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Mod.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Add dependencies -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+</Project>

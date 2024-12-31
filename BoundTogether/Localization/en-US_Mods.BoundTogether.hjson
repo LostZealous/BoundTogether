@@ -1,0 +1,15 @@
+Configs: {
+	BoundTogetherConfig: {
+		DisplayName: Bound Together Config
+
+		MaxTetherRange: {
+			Label: Maximum Tether Range (Tiles)
+			Tooltip: The maximum distance players can move apart before penalties are applied.
+		}
+
+		EnablePenalties: {
+			Label: Enable Tether Penalties
+			Tooltip: Enable or disable penalties when players exceed the tether range.
+		}
+	}
+}
