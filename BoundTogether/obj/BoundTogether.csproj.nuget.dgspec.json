@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cw111\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BoundTogether\\BoundTogether.csproj": {}
+    "C:\\Users\\cory\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BoundTogether\\BoundTogether\\BoundTogether\\BoundTogether.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cw111\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BoundTogether\\BoundTogether.csproj": {
+    "C:\\Users\\cory\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BoundTogether\\BoundTogether\\BoundTogether\\BoundTogether.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cw111\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BoundTogether\\BoundTogether.csproj",
+        "projectUniqueName": "C:\\Users\\cory\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BoundTogether\\BoundTogether\\BoundTogether\\BoundTogether.csproj",
         "projectName": "BoundTogether",
-        "projectPath": "C:\\Users\\cw111\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BoundTogether\\BoundTogether.csproj",
-        "packagesPath": "C:\\Users\\cw111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cw111\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BoundTogether\\obj\\",
+        "projectPath": "C:\\Users\\cory\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BoundTogether\\BoundTogether\\BoundTogether\\BoundTogether.csproj",
+        "packagesPath": "C:\\Users\\cory\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cory\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BoundTogether\\BoundTogether\\BoundTogether\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cw111\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\cory\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -36,7 +36,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
