@@ -1,3 +1,0 @@
-displayName = BoundTogether
-author = LostZealous and CorySands
-version = 0.1
