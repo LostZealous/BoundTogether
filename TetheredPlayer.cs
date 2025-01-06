@@ -4,6 +4,7 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
+using BoundTogether.Content.Buffs;
 
 namespace BoundTogether
 {
@@ -49,7 +50,7 @@ namespace BoundTogether
 
                 Player.position = targetPlayer.Center + direction * MaxDistance - new Vector2(Player.width / 2, Player.height / 2);
 
-                Player.AddBuff(BuffID.Dazed, 60);
+                targetPlayer.AddBuff(ModContent.BuffType<Taut>(), 60);
                 //targetPlayer.AddBuff(BuffID.Dazed, 60);
                 // if (Main.myPlayer == Player.whoAmI)
                 // {
