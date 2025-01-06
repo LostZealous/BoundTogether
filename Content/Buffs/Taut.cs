@@ -12,8 +12,8 @@ namespace BoundTogether.Content.Buffs
         // public override LocalizedText Description => base.Description.WithFormatArgs(DefenseBonus);
 
         public override void Update(Player player, ref int buffIndex) {
-            player.moveSpeed = 1;
-            player.jumpSpeedBoost = -20;
+            player.moveSpeed = -3;
+            player.jumpSpeedBoost = 0;
 		}
 	}
 }
