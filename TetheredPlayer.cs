@@ -63,10 +63,10 @@ namespace BoundTogether
 
                 Player.position = targetPlayer.Center + direction * MaxDistance - new Vector2(Player.width / 2, Player.height / 2);
 
-                if (Main.myPlayer == Player.whoAmI)
-                {
-                    Main.NewText("You cannot move that far away from your partner!", Microsoft.Xna.Framework.Color.Red);
-                }
+                // if (Main.myPlayer == Player.whoAmI)
+                // {
+                //     Main.NewText("You cannot move that far away from your partner!", Microsoft.Xna.Framework.Color.Red);
+                // }
             }
         }
 
@@ -89,7 +89,7 @@ namespace BoundTogether
                     position,
                     null,
                     Color.White,
-                    direction.ToRotation(),
+                    direction.ToRotation() + MathHelper.PiOver2,
                     new Vector2(chainTexture.Width / 2f, chainTexture.Height / 2f),
                     1f,
                     SpriteEffects.None,
