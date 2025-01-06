@@ -4,3 +4,10 @@ Buffs: {
 		Description: Mods.BoundTogether.Buffs.Taut.Description
 	}
 }
+
+Items: {
+	UnityCrest: {
+		DisplayName: Unity Crest
+		Tooltip: ""
+	}
+}

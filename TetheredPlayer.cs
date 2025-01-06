@@ -4,7 +4,7 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
-using BoundTogether.Content.Buffs;
+//using BoundTogether.Content.Buffs;
 
 namespace BoundTogether
 {
@@ -39,25 +39,27 @@ namespace BoundTogether
             return null;
         }
 
-        private void RestrictMovement(Player targetPlayer)
-        {
-            float distance = Vector2.Distance(Player.Center, targetPlayer.Center);
+private void RestrictMovement(Player targetPlayer)
+{
+    float distance = Vector2.Distance(Player.Center, targetPlayer.Center);
 
-            if (distance > MaxDistance)
-            {
-                Vector2 direction = Player.Center - targetPlayer.Center;
-                direction.Normalize();
+    if (distance > MaxDistance)
+    {
+        Vector2 direction = Player.Center - targetPlayer.Center;
+        direction.Normalize();
 
-                Player.position = targetPlayer.Center + direction * MaxDistance - new Vector2(Player.width / 2, Player.height / 2);
+        Vector2 midpoint = (Player.Center + targetPlayer.Center) / 2;
 
-                targetPlayer.AddBuff(ModContent.BuffType<Taut>(), 60);
-                //targetPlayer.AddBuff(BuffID.Dazed, 60);
-                // if (Main.myPlayer == Player.whoAmI)
-                // {
-                //     Main.NewText("You cannot move that far away from your partner!", Microsoft.Xna.Framework.Color.Red);
-                // }
-            }
-        }
+        Vector2 playerOffset = Player.Center - midpoint;
+        Vector2 targetPlayerOffset = targetPlayer.Center - midpoint;
+
+        float pullStrength = 0.1f; 
+        Player.velocity -= playerOffset * pullStrength/8;
+        targetPlayer.velocity -= targetPlayerOffset * pullStrength/8;
+    }
+
+}
+
 
         private void DrawChain(Player targetPlayer, PlayerDrawSet drawInfo)
         {
