@@ -1,0 +1,5 @@
+author=YourName
+version=1.0
+displayName=Bound Together
+homepage=https://github.com/YourRepoLink (optional)
+description=Players are bound together by an unbreakable chain!
