@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
@@ -13,43 +14,28 @@ namespace BoundTogether
 
         public override void PostUpdate()
         {
-            Player closestPlayer = FindClosestPlayer();
-
-            if (closestPlayer != null)
-            {
-                RestrictMovement(closestPlayer);
+            Player nextPlayer = FindNextPlayer();
+            if (nextPlayer != null) {                
+                RestrictMovement(nextPlayer); 
             }
         }
 
         public override void ModifyDrawInfo(ref PlayerDrawSet drawInfo)
         {
-            Player closestPlayer = FindClosestPlayer();
-
-            if (closestPlayer != null)
-            {
-                DrawChain(closestPlayer, drawInfo);
+            Player nextPlayer = FindNextPlayer();
+            if (nextPlayer != null) {
+                DrawChain(nextPlayer, drawInfo); 
             }
         }
 
-        private Player FindClosestPlayer()
-        {
-            Player closest = null;
-            float minDistance = float.MaxValue;
-
-            foreach (Player otherPlayer in Main.player)
-            {
-                if (otherPlayer.active && otherPlayer.whoAmI != Player.whoAmI)
-                {
-                    float distance = Vector2.Distance(Player.Center, otherPlayer.Center);
-                    if (distance < minDistance)
-                    {
-                        minDistance = distance;
-                        closest = otherPlayer;
-                    }
+        private Player FindNextPlayer() {
+            foreach (Player otherPlayer in Main.player) {
+                if (otherPlayer.active && otherPlayer.whoAmI > Player.whoAmI) {
+                    return otherPlayer;
                 }
             }
-
-            return closest;
+            
+            return null;
         }
 
         private void RestrictMovement(Player targetPlayer)
@@ -63,6 +49,8 @@ namespace BoundTogether
 
                 Player.position = targetPlayer.Center + direction * MaxDistance - new Vector2(Player.width / 2, Player.height / 2);
 
+                Player.AddBuff(BuffID.Dazed, 60);
+                //targetPlayer.AddBuff(BuffID.Dazed, 60);
                 // if (Main.myPlayer == Player.whoAmI)
                 // {
                 //     Main.NewText("You cannot move that far away from your partner!", Microsoft.Xna.Framework.Color.Red);
